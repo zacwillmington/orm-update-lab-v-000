@@ -64,4 +64,9 @@ class Student
       self.new_from_db(student_found)
   end
 
+  def update
+      self.save
+
+  end
+
 end
