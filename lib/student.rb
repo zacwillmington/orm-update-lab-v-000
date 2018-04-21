@@ -61,7 +61,7 @@ class Student
       SQL
       student_found = DB[:conn].execute(sql, name).first
     #   binding.pry
-      self.new_from_db(student_found])
+      self.new_from_db(student_found)
   end
 
 end
