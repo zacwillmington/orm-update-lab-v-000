@@ -54,12 +54,12 @@ class Student
   end
 
   def self.find_by_name(name)
-      sql = <<-SQL 
+      sql = <<-SQL
       SELECT * FROM students
       WHERE name = ?;
       SQL
-
-      DB[:conn].execute(sql, name)
+      student_found = DB[:conn].execute(sql, name).first
+      self.create(student_found[1], student_found[2])
   end
 
 end
