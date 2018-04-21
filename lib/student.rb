@@ -60,7 +60,7 @@ class Student
       WHERE name = ?;
       SQL
       student_found = DB[:conn].execute(sql, name).first
-      binding.pry
+    #   binding.pry
       self.save(student_found[1], student_found[2])
   end
 
