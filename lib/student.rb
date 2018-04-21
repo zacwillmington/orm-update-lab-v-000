@@ -31,7 +31,7 @@ class Student
 
   def save
       if self.id
-          sql = "UPDATE songs SET name = ?, grade = ? WHERE id = ?"
+          sql = "UPDATE students SET name = ?, grade = ? WHERE id = ?"
           DB[:conn].execute(sql, self.name, self.grade, self.id)
       else
           sql = <<-SQL
